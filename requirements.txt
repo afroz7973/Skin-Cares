@@ -1,0 +1,6 @@
+Flask
+inference-sdk
+Werkzeug
+Flask
+Flask-Cors
+requests

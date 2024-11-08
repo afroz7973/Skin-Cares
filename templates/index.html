@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin Type Checker</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Skin Type Checker</h1>
+  </header>
+
+  <main>
+    <section class="instructions">
+      <p>Upload a clear photo or use your camera, then click "Check My Skin Type".</p>
+    </section>
+
+    <section class="upload-section">
+      <input type="file" id="photo" accept="image/*">
+      <button onclick="openCamera()">Take Picture</button>
+      <video id="video" autoplay style="display:none;" width="300"></video>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <button id="captureButton" style="display:none;" onclick="captureImage()">Capture</button>
+      <button id="checkSkinType">Check My Skin Type</button>
+    </section>
+
+    <section id="results" style="display:none;">
+      <h2>Your Skin Type: <span id="skinType"></span> (<span id="confidence"></span>% Confidence)</h2>
+      <div id="recommendations">
+        <h3>Recommended Products:</h3>
+        <ul id="productList"></ul>
+      </div>
+    </section>
+
+    <script src="/static/app.js"></script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    background-color: #2c3e50;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  .upload-section button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  #results {
+    margin-top: 20px;
+  }
+  
