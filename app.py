@@ -13,20 +13,19 @@ CLIENT = InferenceHTTPClient(
 
 # Function to generate recommendations based on skin type
 def generate_recommendations(skin_type):
-    skin_type = skin_type.strip().capitalize()  # Normalize input
+    skin_type = skin_type.strip().lower()  # Normalize input to lowercase
 
-    if skin_type == "Oily":
+    if "oily" in skin_type:
         return ["Oil-free moisturizer", "Gentle cleanser", "SPF 50 sunscreen"]
-    elif skin_type == "Dry":
+    elif "dry" in skin_type:
         return ["Hydrating serum", "Moisturizing cream", "Gentle cleanser"]
-    elif skin_type == "Combination":
+    elif "combination" in skin_type:
         return ["Balancing toner", "Lightweight moisturizer", "SPF 30 sunscreen"]
-    elif skin_type == "Sensitive":
+    elif "sensitive" in skin_type:
         return ["Soothing gel", "Fragrance-free moisturizer", "Mineral sunscreen"]
     else:
-        return ["SEEEMORE Soothing gel", "Fragrance-free moisturizer", "Mineral sunscreen"]
+        return ["Soothing gel", "Fragrance-free moisturizer", "Mineral sunscreen", "Vitamin C serum"]
 
-# Route to render the main page
 @app.route('/')
 def index():
     return render_template('index.html')
